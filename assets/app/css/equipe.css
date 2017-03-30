@@ -1,0 +1,35 @@
+
+/*Titulo*/
+h1{
+    font-size: 40px;
+    text-align: center;
+    line-height: 2;
+}
+@media (min-width: 1200px)
+grid.less:7
+    .container {
+        width: 1170px;
+    }
+    @media (min-width: 992px)
+    grid.less:85
+        .container {
+            width: 970px;
+        }
+        @media (min-width: 768px)
+        grid.less:85
+            .container {
+                width: 750px;
+            }
+            bootstrap.css:1576
+            .container {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+.col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
