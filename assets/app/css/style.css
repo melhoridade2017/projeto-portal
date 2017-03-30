@@ -3,6 +3,8 @@
 	display: none;
 }
 
+/* FOOTER */
+
 ul, ol {
 padding-left: 0 !important; 
 }
@@ -39,3 +41,5 @@ footer {
 	color:#fff;
 	font-size:0.9em;
 }
+
+/* END FOOTER */
