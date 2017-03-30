@@ -20,6 +20,11 @@ Para começar a implementar o projeto, siga os passos abaixo.
 	
 * Instalar Bower
 	`bower install`
+	
+* Startar servidor local
+	`npm run dev-node`
+
+
 
 ### Criação de novas páginas
 
