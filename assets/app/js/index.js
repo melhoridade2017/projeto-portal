@@ -10,4 +10,12 @@ $(document).ready(function(){
       buscaEndereco.busca();
     }
   });
+
+
+  function getYear(){
+		return (new Date().getFullYear());
+	}
+
+	$('#year').html(getYear());
+ 
 });
