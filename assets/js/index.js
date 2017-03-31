@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#buscarEnderecoBTN").click(function(){var c=$("#CEP").val();if(""!=c){new BuscaEndereco(c).busca()}})});
+$(document).ready(function(){$("#buscarEnderecoBTN").click(function(){var e=$("#CEP").val();if(""!=e){new BuscaEndereco(e).busca()}}),$("#year").html(function(){return(new Date).getFullYear()}())});
