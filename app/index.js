@@ -9,6 +9,11 @@ router.get('/noticias', require('./noticias/index'));
 router.get('/servicos', require('./servicos/index'));
 router.get('/fotos', require('./fotos/index'));
 router.get('/instalacoes', require('./instalacoes/index'));
+router.get('/duvidas', require('./duvidas/index'));
+router.get('/quem-somos', require('./quem-somos/index'));
+router.get('/servicos', require('./servicos/index'));
+router.get('/fotos', require('./fotos/index'));
+router.get('/instalacoes', require('./instalacoes/index'));
 
 
 module.exports = router;
