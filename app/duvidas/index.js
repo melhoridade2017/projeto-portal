@@ -1,5 +1,5 @@
 var Service = function(req, res) {
-    res.render('noticias/index');
+    res.render('duvidas/index');
 };
 
 module.exports = Service;
