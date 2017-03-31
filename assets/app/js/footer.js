@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#buscarEnderecoBTN").click(function(){var n=$("#CEP").val();if(""!=n){new BuscaEndereco(n).busca()}}),$("#footer").load("http://localhost:3000/footer")});
