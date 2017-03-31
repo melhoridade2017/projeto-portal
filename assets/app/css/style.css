@@ -1,4 +1,10 @@
-#exibiEndereco
-{
-	display: none;
+form.navbar-form.form-blog.navbar-left {
+    padding: 0px;
+}
+.sidebar form {
+    margin-left: 5px;
+}
+inspector-stylesheet:1
+.sidebar {
+    padding: 19px;
 }
