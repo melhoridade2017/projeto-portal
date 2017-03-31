@@ -1,7 +1,16 @@
+form.navbar-form.form-blog.navbar-left {
+    padding: 0px;
+}
+.sidebar form {
+    margin-left: 5px;
+}
+inspector-stylesheet:1
+.sidebar {
+    padding: 19px;
+}
 /* Banner */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-		width: 50%;
 		margin: auto;
 }
 
@@ -49,4 +58,3 @@ footer {
 	font-size:0.9em;
 }
 
-/* END FOOTER */
