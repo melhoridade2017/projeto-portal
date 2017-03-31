@@ -1,4 +1,9 @@
-#exibiEndereco
-{
-	display: none;
+body{
+	background: #red;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+#content{
+	background: #blue;
+	 width: 1170px;
 }
