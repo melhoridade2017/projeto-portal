@@ -1,3 +1,19 @@
+form.navbar-form.form-blog.navbar-left {
+    padding: 0px;
+}
+.sidebar form {
+    margin-left: 5px;
+}
+inspector-stylesheet:1
+.sidebar {
+    padding: 19px;
+}
+/* Banner */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+		margin: auto;
+}
+
 #exibiEndereco
 {
 	display: none;
@@ -24,12 +40,12 @@ footer {
 }
 
 .footer-links a, .footer-links a:hover, .footer-links a:active{
-	color:1b60ab;
+	color:#1b60ab;
 }
 
 .footer-details {
 	background: #334346;
-	/*color: #939393;*/color: #c6c6c6;
+	color: #c6c6c6;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
@@ -42,4 +58,3 @@ footer {
 	font-size:0.9em;
 }
 
-/* END FOOTER */
