@@ -12,6 +12,7 @@ router.get('/instalacoes', require('./instalacoes/index'));
 router.get('/duvidas', require('./duvidas/index'));
 router.get('/quem-somos', require('./quem-somos/index'));
 router.get('/produto_cadeirarodas', require('./produto_cadeirarodas/index'));
+router.get('/produto_bengala', require('./produto_bengala/index'));
 
 router.get('/cadeiras_rodas_w', require('./cadeiras_rodas_w/index'));
 
