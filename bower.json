@@ -1,12 +1,12 @@
 {
-  "name": "portalv10",
+  "name": "projeto-portal",
   "description": "",
   "main": "index.js",
   "authors": [
     "Michael Douglas <michaeldouglas010790@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/melhoridade2017/projeto-portal",
   "ignore": [
     "**/.*",
     "node_modules",
