@@ -24,8 +24,6 @@ Para começar a implementar o projeto, siga os passos abaixo.
 * Startar servidor local
 	`npm run dev-node`
 
-
-
 ### Criação de novas páginas
 
 Para começar a edição de uma nova página dentro do projeto você deverá seguir os passos abaixo.
