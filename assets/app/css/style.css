@@ -22,7 +22,7 @@ inspector-stylesheet:1
 /* FOOTER */
 
 ul, ol {
-padding-left: 0 !important; 
+padding-left: 0 !important;
 }
 
 li {
@@ -57,4 +57,3 @@ footer {
 	color:#fff;
 	font-size:0.9em;
 }
-
