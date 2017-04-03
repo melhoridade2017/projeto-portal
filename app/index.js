@@ -17,5 +17,6 @@ router.get('/cadeiras_rodas_w', require('./cadeiras_rodas_w/index'));
 router.get('/footer', require('./modulos/footer'));
 router.get('/banner', require('./modulos/banner'));
 router.get('/menu', require('./modulos/menu'));
+router.get('/localizacao', require('./localizacao/index'));
 
 module.exports = router;
