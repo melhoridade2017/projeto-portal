@@ -11,7 +11,6 @@ inspector-stylesheet:1
 /* Banner */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-		width: 50%;
 		margin: auto;
 }
 
@@ -58,8 +57,3 @@ footer {
 	color:#fff;
 	font-size:0.9em;
 }
-
-<<<<<<< HEAD
-/* END FOOTER */
-=======
->>>>>>> 6949d0571410f536f055fafb8a265ddf4a14bb65
