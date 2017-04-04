@@ -6,7 +6,15 @@ h1{
 	font-family: Arial;
 	font-size: 4em;
 }
-#row{
+div.row{
 	/*display: block;*/
 	text-align: center;
+}
+
+div.container{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
