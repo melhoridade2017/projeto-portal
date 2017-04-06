@@ -6,6 +6,7 @@ h1{
 	font-family: Arial;
 	font-size: 4em;
 }
+<<<<<<< HEAD:assets/app/css/servicos/servicos.css
 <<<<<<< HEAD
 
 #row{
@@ -14,3 +15,17 @@ h1{
 }
 =======
 >>>>>>> fe72254284107b676d230d417e19b09d9ac63d76
+=======
+div.row{
+	/*display: block;*/
+	text-align: center;
+}
+
+div.container{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+>>>>>>> 508d62d8f28f2104d628f45b2ffcbeae4e76c19f:assets/app/css/servicos.css

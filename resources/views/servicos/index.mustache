@@ -9,46 +9,55 @@
     <link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- APP STYLE -->
     <link href="/assets/css/style.css" rel="stylesheet">
-    <link href="/assets/app/css/servicos/servicos.css" rel="stylesheet">
+    <link href="/assets/app/css/servicos.css" rel="stylesheet">
   </head>
 
   <body>
-    <!-- Menu -->
-    <div class="navbar-wrapper">
-    <div class="container">
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Melhor Idade SA</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/home">Home</a></li>
-                        <li><a href="/quemsomos">Quem somos</a></li>
-                        <li><a href="/servicos">Serviços</a></li>
-                        <li><a href="/equipe">Equipe</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/noticias">Noticias</a></li>
-                        <li><a href="/fotos">Fotos</a></li>
-                        <li><a href="/duvidas">Dúvidas</a></li>
-                        <li class="dropdown">
-                            <a href="/produtos" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produtos<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/cadeiraderodas">Cadeira de Rodas</a></li>
-                                <li><a href="/bengalas">Bengalas</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    </div>
+    <header>
+        <!--menu modulazizado - modulo esta na pasta Resources, modulos-->
+      <div id="menu"></div>
+    </header>
+    
+    <!-- Menu -->
+    <!--div class="navbar-wrapper">
+      <div class="container">
+
+          <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                  <div class="navbar-header">
+                      <a class="navbar-brand" href="/">Melhor Idade SA</a>
+                  </div>
+                  <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                          <li class="active"><a href="/home">Home</a></li>
+                          <li><a href="/quemsomos">Quem somos</a></li>
+                          <li><a href="/servicos">Serviços</a></li>
+                          <li><a href="/equipe">Equipe</a></li>
+                          <li><a href="/blog">Blog</a></li>
+                          <li><a href="/noticias">Noticias</a></li>
+                          <li><a href="/fotos">Fotos</a></li>
+                          <li><a href="/duvidas">Dúvidas</a></li>
+                          <li class="dropdown">
+                              <a href="/produtos" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produtos<span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/cadeiraderodas">Cadeira de Rodas</a></li>
+                                  <li><a href="/bengalas">Bengalas</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </div>
+    </div-->
     <!-- Fim do Menu -->
     <!--Slider -->
         
+    <!--Banner modulazizado - modulo esta na pasta Resources, modulos-->    
     <section class="banner">
+      <div id="banner"></div>
+    </section>
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -60,7 +69,7 @@
           </ol>
 
           <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
+          <!--div class="carousel-inner" role="listbox">
 
               <div class="item active">
                   <img src="http://st.depositphotos.com/1031343/3027/v/950/depositphotos_30273183-stock-illustration-example-stamp.jpg" alt="Chania" width="460" height="345">
@@ -78,10 +87,10 @@
                   </div>
               </div>
 
-          </div>
+          </div-->
 
           <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <!--a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
           </a>
@@ -89,74 +98,79 @@
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
           </a>
-      </div>
-    </section>
-
+      </div-->
+    
     <h1>Servicos</h1>
 
    <!--Primeiro bloco de imagens-->
-   <div class="row">
-     <div class="col-xs-6 col-md-3">
-       <a href="#" class="thumbnail">
-         <img src="/assets/img/servicos/atividadefisicaseLazer.png" alt="...">
-          <p>Atividades Fisica</p>
-       </a>
+   <div class="container">
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="/assets/img/servicos/atividadefisicaseLazer.png" alt="...">
+            <p>Atividades Fisica</p>
+         </a>
+       </div>
+
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="/assets/img/servicos/cuidadocomaalimentação.png" alt="...">
+            <p>Alimentação Especial</p>
+         </a>
+       </div>
+
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="/assets/img/servicos/cuidadocomapele.png" alt="...">
+            <p>Cuidado com a pele</p>
+         </a>
+       </div>
      </div>
 
-     <div class="col-xs-6 col-md-3">
-       <a href="#" class="thumbnail">
-         <img src="/assets/img/servicos/cuidadocomaalimentação.png" alt="...">
-          <p>Alimentação Especial</p>
-       </a>
-     </div>
+     <!--Segundo bloco de imagens-->
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="/assets/img/servicos/cuidadocomasaude.png" alt="...">
+            <p>Cuidados com a Saùde</p>
+         </a>
+       </div>
 
-     <div class="col-xs-6 col-md-3">
-       <a href="#" class="thumbnail">
-         <img src="/assets/img/servicos/cuidadocomapele.png" alt="...">
-          <p>Cuidado com a pele</p>
-       </a>
-     </div>
-   </div>
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="/assets/img/servicos/lazer.png" alt="...">
+            <p>Lazer</p>
+         </a>
+       </div>
 
-   <!--Segundo bloco de imagens-->
-   <div class="row">
-     <div class="col-xs-6 col-md-3">
-       <a href="#" class="thumbnail">
-         <img src="/assets/img/servicos/cuidadocomasaude.png" alt="...">
-          <p>Cuidados com a Saùde</p>
-       </a>
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="/assets/img/servicos/transporteespecializado.png" alt="...">
+            <P>Transportes Especializado</P>
+         </a>
+       </div>
      </div>
-
-     <div class="col-xs-6 col-md-3">
-       <a href="#" class="thumbnail">
-         <img src="/assets/img/servicos/lazer.png" alt="...">
-          <p>Lazer</p>
-       </a>
-     </div>
-
-     <div class="col-xs-6 col-md-3">
-       <a href="#" class="thumbnail">
-         <img src="/assets/img/servicos/transporteespecializado.png" alt="...">
-          <P>Transportes Especializado</P>
-       </a>
-     </div>
-   </div>
+    </div>
 
   
     <footer>
+      <!--footer modulazizado - modulo esta na pasta Resources, modulos-->
       <!-- COPYRIGHT -->
-      <div class="footer-copyright col-xs-12 col-ms-12 col-md-12 col-lg-12">
+      <!--div class="footer-copyright col-xs-12 col-ms-12 col-md-12 col-lg-12">
          <div class="text-center">&copy <span id='year'></span> - Melhor Idade S.A. Todos os Direitos Reservados
          </div>
-      </div>
+      </div-->
       <!-- END COPYRIGHT -->
       <!-- Fim do Footer -->
+      <div id="footer"></div>
     </footer>
 
-   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
-   <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+   <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
    <!-- APP JS -->
-   <script src="assets/js/BuscaEndereco.js"></script>
-   <script src="assets/js/index.js"></script>
+   <script src="/assets/js/BuscaEndereco.js"></script>
+   <script src="/assets/js/index.js"></script>
+   <script src="/assets/js/modulos.js"></script>
+   <script src="/assets/js/footer.js"></script>
  </body>
 </html>
