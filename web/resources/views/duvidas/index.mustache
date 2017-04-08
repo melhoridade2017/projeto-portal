@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     
@@ -14,9 +14,10 @@
     <link href="/assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
 
+    <header>
     </header>
+
     <section class="banner">
 
     </section>
@@ -24,7 +25,7 @@
 <div class ="row">
 </div>
 
-      <div class="jumbotron">
+      <div class="jumbotron text-center">
         <h1>Seção de Dúvidas - Portal da Melhor Idade</h1>
         <p>Antes de encaminhar suas questões para nós verifique se já existe solução em nosso FAQ abaixo</p>
       </div>
@@ -32,14 +33,25 @@
 <form class="form-horizontal">
 <fieldset>
 
+<div class="text-center">
+<h2> <legend>Perguntas Frequentes</legend> </h2>
+</div>
+
+
+
 <!-- Area do formulario  -->
-<legend>Fale Conosco</legend>
+
+<div class="panel panel-default">
+  <div class="panel-body text-center"><h2>Fale conosco</h2></div>
+</div>
+
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Nome (*)</label>  
+
+  <label class="col-md-4 control-label" for="usr">Nome (*)</label>  
   <div class="col-md-5">
-  <input id="textinput" name="textinput" placeholder="Coloque seu nome" class="form-control input-md" required="" type="text">
+  <input id="textinput" name="textinput" placeholder="Coloque seu nome" class="form-control input-md" required="" type="text" class ="form-control">
   <span class="help-block">Digite seu nome completo Ex: José da Silva</span>  
   </div>
 </div>
@@ -88,15 +100,19 @@
 
 </div>
 
-    <footer>
+ 
+<footer>
+  <div id="footer"></div>
+</footer>
 
-    </footer>
+    
 
    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
    <!-- APP JS -->
    
    <script src="assets/js/index.js"></script>
+   <script src="/assets/js/modulos.js"></script>
 
  </body>
 </html>
