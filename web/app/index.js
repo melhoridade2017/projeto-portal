@@ -14,6 +14,7 @@ router.get('/quem-somos', require('./quem-somos/index'));
 router.get('/produto_cadeirarodas', require('./produto_cadeirarodas/index'));
 router.get('/produto_bengala', require('./produto_bengala/index'));
 router.get('/cadeiras_rodas_w', require('./cadeiras_rodas_w/index'));
+router.get('/footer_home', require('./modulos/footer_home'));
 router.get('/footer', require('./modulos/footer'));
 router.get('/banner', require('./modulos/banner'));
 router.get('/menu', require('./modulos/menu'));
