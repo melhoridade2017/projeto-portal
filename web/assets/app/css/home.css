@@ -34,7 +34,12 @@ grid.less:7
     margin-bottom: 20px;
     text-align: center;
 }
+<<<<<<< HEAD
 .col-lg-4 p{
 
+=======
+
+.col-lg-4 p{
+>>>>>>> master
   text-align: justify;
 }
