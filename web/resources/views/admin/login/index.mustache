@@ -56,5 +56,36 @@
    <script src="/assets/js/BuscaEndereco.js"></script>
    <script src="/assets/js/index.js"></script>
    <script src="/assets/js/modulos.js"></script>
+
+   <script type="text/javascript">
+  $( document ).ready(function() {
+    
+    $("#btLogin").click(function(){
+      var usuario = $("#usuario").val();
+      var senha = $("#senha").val();
+
+      if(usuario != "" && senha != "") {
+        $.ajax({
+          method: "POST",
+          data: {'usuario': usuario, 'senha': senha},
+          url: "http://localhost:4000/login"
+        }).done(function( data ) {
+          if ((data[0].usuario=='admin')&&(data[0].senha=='testando...')){
+            location.reload('http://localhost:3000/home')
+          }else{
+            $('.resp').text('Acesso não autorizado!');
+          }
+        });
+
+    }else{
+      $('.resp').text('Acesso não autorizado!');
+    }
+
+  });
+
+  });
+
+  </script>
+
  </body>
 </html>
