@@ -1,0 +1,31 @@
+#exibiEndereco{display:none}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxlQUVDLFFBQVMiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2V4aWJpRW5kZXJlY29cclxue1xyXG5cdGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuIl19 */
+h1{
+	text-align: center;
+	color: gray;
+	font-family: Arial;
+	font-size: 4em;
+}
+<<<<<<< HEAD:assets/app/css/servicos/servicos.css
+<<<<<<< HEAD
+
+#row{
+	/*display: block;*/
+	text-align: center;
+}
+=======
+>>>>>>> fe72254284107b676d230d417e19b09d9ac63d76
+=======
+div.row{
+	/*display: block;*/
+	text-align: center;
+}
+
+div.container{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+>>>>>>> 508d62d8f28f2104d628f45b2ffcbeae4e76c19f:assets/app/css/servicos.css

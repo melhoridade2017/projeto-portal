@@ -13,5 +13,13 @@
     "bower_components",
     "test",
     "tests"
+<<<<<<< HEAD
   ]
+=======
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "private": true
+>>>>>>> 38c254b54884d1e18b68981beed8fea5829f704e
 }

@@ -1,5 +1,12 @@
 .idea/
 node_modules/
 assets/vendor/
+<<<<<<< HEAD
+/nbproject/private/
+=======
 assets/app/img/
+<<<<<<< HEAD
+>>>>>>> e0e86a6f555e697ac4a19625659efad074ce6706
+=======
 npm-debug.log
+>>>>>>> 508d62d8f28f2104d628f45b2ffcbeae4e76c19f
