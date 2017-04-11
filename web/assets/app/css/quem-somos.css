@@ -41,7 +41,7 @@ p::first-letter {
   color: #000;
 }
 
- Rodapé
+ /*Rodapé*/
 .footer {
   position: absolute;
   bottom: 0;
