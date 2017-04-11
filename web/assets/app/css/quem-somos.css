@@ -35,7 +35,7 @@ article {
   src: url(camelotcaps.ttf);
 }
 
-p::first-letter {
+article p::first-letter {
   font-size: 500%;
   font-family: CamelotCaps, Arial, Helvetica, sans-serif;
   color: #000;
