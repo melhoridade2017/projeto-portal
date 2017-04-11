@@ -3,10 +3,10 @@ var mysql      = require('mysql');
 var bodyParser  = require('body-parser');
 
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'mdba2007',
-    database : 'melhoridade'
+    host     : 'sql10.freemysqlhosting.net',
+    user     : 'sql10168513',
+    password : 'YLruKlqEIA',
+    database : 'sql10168513'
 });
 var app = express();
 
@@ -20,6 +20,32 @@ connection.connect(function(err){
     } else {
         console.log("Erro ao conectar ... \n\n");
     }
+});
+
+app.post('/inserir/usuario', function (req, res) {
+    var data = req.body;
+    var sql = 'INSERT INTO usuario (username,senha,status) VALUES(\''+data.username+'\', \''+data.senha+'\', \''+data.status+'\') ;';
+    connection.query(sql ,
+        function(err, rows, fields) {
+          if(err) {
+            res.json({'erro': 'Erro ao inserir os dados na tabela de usuario', 'sql': sql});
+          } else {
+            res.json(rows);
+          }
+    });
+});
+
+app.get("/usuario",function(req,res){
+    connection.query('select username,senha, status from usuario;', function(err, rows, fields) {
+        res.json(rows);
+    });
+});
+
+app.get("/usuario/:id",function(req,res){
+    var idUsuario = req.params.id;
+    connection.query('select username,senha, status from usuario where id = \''+idUsuario+'\';', function(err, rows, fields) {
+        res.json(rows);
+    });
 });
 
 app.post('/inserir/banner', function (req, res) {
@@ -47,5 +73,6 @@ app.get("/banner/:id",function(req,res){
         res.json(rows);
     });
 });
+
 
 app.listen(4000);
