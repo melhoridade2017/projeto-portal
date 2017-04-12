@@ -36,19 +36,7 @@ app.post('/inserir/usuario', function (req, res) {
     });
 });
 
-// altera usuario
-app.post('/altera/usuario', function (req, res) {
-    var data = req.body;
-    var sql = 'UPDATE  usuarios  SET (\''+data.username+'\', \''+data.senha+'\', \''+data.status+'\') WHERE (\''+data.id+'\');';
-    connection.query(sql ,
-        function(err, rows, fields) {
-            if(err) {
-                res.json({'erro': 'Erro ao alterar os dados na tabela de usuarios', 'sql': sql});
-            } else {
-                res.json(rows);
-            }
-        });
-});
+
 
 
 // Retorna usuario
@@ -67,16 +55,31 @@ app.get("/usuario/:id",function(req,res){
 
 
 // Deletar usuario
-app.get("/deletar/usuario/:id",function(req,res){
+app.post("/deletar/usuario/:id",function(req,res){
     var idUsuario = req.params.id;
     connection.query('DELETE FROM usuarios where id = \''+idUsuario+'\';', function(err, rows, fields) {
         res.json(rows);
     });
 });
 
+// Altera usuario
+app.post("/altera/usuario/:id",function(req,res){
+    var idUsuario = req.params.id;
+    connection.query('UPDATE  usuarios  SET username="\''+data.username+'\'", senha="\''+data.senha+'\'", status="\''+data.status+'\'"  where id = \''+idUsuario+'\';', function(err, rows, fields) {
+        res.json(rows);
+    });
+});
 
 
+/*app.post("/altera/usuario/:id",function(req,res){
+    var idUsuario = req.params.id;
+    connection.query('UPDATE  usuarios  SET username="\''+data.username+'\'", senha="\''+data.senha+'\'", status="\''+data.status+'\'"  where id = \''+idUsuario+'\';', function(err, rows, fields) {
+        res.json(rows);
+    });
+});*/
 
+
+//----------------------------------------------------------//
 
 app.post('/inserir/banner', function (req, res) {
     var data = req.body;
