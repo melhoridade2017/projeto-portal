@@ -22,6 +22,7 @@ connection.connect(function(err){
     }
 });
 
+// insere usuario
 app.post('/inserir/usuario', function (req, res) {
     var data = req.body;
     var sql = 'INSERT INTO usuarios (username,senha,status) VALUES(\''+data.username+'\', \''+data.senha+'\', \''+data.status+'\') ;';
@@ -35,6 +36,22 @@ app.post('/inserir/usuario', function (req, res) {
     });
 });
 
+// altera usuario
+app.post('/altera/usuario', function (req, res) {
+    var data = req.body;
+    var sql = 'UPDATE  usuarios  SET (\''+data.username+'\', \''+data.senha+'\', \''+data.status+'\') WHERE (\''+data.id+'\');';
+    connection.query(sql ,
+        function(err, rows, fields) {
+            if(err) {
+                res.json({'erro': 'Erro ao alterar os dados na tabela de usuarios', 'sql': sql});
+            } else {
+                res.json(rows);
+            }
+        });
+});
+
+
+// Retorna usuario
 app.get("/usuario",function(req,res){
     connection.query('select username,senha, status from usuarios;', function(err, rows, fields) {
         res.json(rows);
@@ -49,19 +66,11 @@ app.get("/usuario/:id",function(req,res){
 });
 
 
-//DELETE FROM `sql10168513`.`usuarios` WHERE `id`='1' and`username`='lucas' and`senha`='lucas' and`status`='1';
-
-
-app.post('/deleta/usuario', function (req, res) {
-    var data = req.body;
-    var sql = 'DELETE FROM `sql10168513`.`usuarios` (username,senha,status) VALUES(\''+data.username+'\', \''+data.senha+'\', \''+data.status+'\') ;';
-    connection.query(sql ,
-        function(err, rows, fields) {
-          if(err) {
-            res.json({'erro': 'Erro ao deletar os dados na tabela de usuarios', 'sql': sql});
-          } else {
-            res.json(rows);
-          }
+// Deletar usuario
+app.get("/deletar/usuario/:id",function(req,res){
+    var idUsuario = req.params.id;
+    connection.query('DELETE FROM usuarios where id = \''+idUsuario+'\';', function(err, rows, fields) {
+        res.json(rows);
     });
 });
 
