@@ -6,6 +6,10 @@
 .carousel-inner > .item > a > img {
 		margin: auto;
 }
+.carousel-inner img{
+width: 460px;
+height: 345px;
+}
 
 #exibiEndereco
 {
