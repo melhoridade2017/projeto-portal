@@ -27,13 +27,13 @@ app.post('/inserir/usuario', (req, res) => {
     let data = req.body;
     let nome = data.username;
     let senha = data.senha;
-      
+
       if (nome != "" && senha != "") {
-       
+
          let sql = 'INSERT INTO usuarios (username,senha) VALUES(\''+data.username+'\', \''+data.senha+'\') ;';
          connection.query(sql ,
          (err, rows, fields) => {
-         
+
             if(err) {
             res.json({'erro': 'Erro ao inserir os dados na tabela de usuarios', 'sql': sql});
                   } else {
@@ -41,10 +41,10 @@ app.post('/inserir/usuario', (req, res) => {
                     }
             });
 
-            } else {                
+            } else {
                 console.log("BARRADO NA BALADA");
             }
-    
+
 });
 
 
@@ -145,16 +145,5 @@ app.post('/inserir/pagina', function (req, res) {
       res.json(erroPadrao, erroPadrao.status);
     };
 });
-
-var executaQuery = (sql, req, res) => {
-  connection.query(sql ,
-    (err, rows, fields) => {
-      if(err) {
-        res.json({err});
-      } else {
-        callback(res.json(rows));
-      }
-    });
-}
 
 app.listen(4000);
