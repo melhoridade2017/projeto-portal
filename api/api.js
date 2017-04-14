@@ -3,13 +3,12 @@ var mysql      = require('mysql');
 var bodyParser  = require('body-parser');
 
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'root',
-    database : 'melhoridade'
+    host     : 'sql10.freemysqlhosting.net',
+    user     : 'sql10168513',
+    password : 'YLruKlqEIA',
+    database : 'sql10168513'
 });
 var app = express();
-
 
 app.use(bodyParser.urlencoded({ extended: false }));
 let erroPadrao = {'message': 'Parâmetros do EndPoint com erro!', 'status' : 403};
@@ -109,12 +108,13 @@ app.get("/banner/:id",function(req,res){
 
 
 app.post('/inserir/pagina', function (req, res) {
+    liberarAcessoDeOutroDominio(res, 'http://localhost:3000');
     let data = req.body;
 
     //Varaiveis do insert de conteudo de pagina
     let _URL = data.url;
     let _TITULO = data.titulo;
-    let _CONTEUDO_JSON = data.conteudo_json.trim();
+    let _CONTEUDO_JSON = data.conteudo_pagina.trim();
 
     //Sql de inserção do conteúdo de página
     if( ( _URL != '' && _CONTEUDO_JSON != '' && _TITULO != '' ) ) {//verifica se os dados não estão vazio
@@ -138,7 +138,6 @@ app.post('/inserir/pagina', function (req, res) {
                     res.json(rows);
                   }
                 });
-
             }
       });
     } else {
@@ -146,4 +145,31 @@ app.post('/inserir/pagina', function (req, res) {
     };
 });
 
+app.get("/pagina/:id",function(req,res){
+    liberarAcessoDeOutroDominio(res, 'http://localhost:3000');
+    var idPagina = req.params.id;
+    let sql = `select titulo from pagina where id = '${idPagina}';`;
+    connection.query(sql, (err, rows, fields) => {
+      if(err){
+        res.json({err});
+      } else{
+        let sqlConteudoPagina = `select url, conteudo_json from conteudo_pagina where pagina_id = '${idPagina}';`;
+
+        //Executa a query de inserção de conteudo de pagina
+        connection.query(sqlConteudoPagina,
+          (err, rows, fields) => {
+            if(err) {
+              res.json({err});
+            } else {
+              res.json(rows);
+            }
+          });
+
+      }
+    });
+});
+
+var liberarAcessoDeOutroDominio = (res, dominio) => {
+  res.setHeader('Access-Control-Allow-Origin', `${dominio}`);
+}
 app.listen(4000);

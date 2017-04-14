@@ -31,7 +31,7 @@
             <br />
             <label for="conteudo">Conteúdo</label>
             <textarea id="conteudo" class="form-control" placeholder="Conteúdo"></textarea>
-            <button class="btn" id="btNoticias">Inserir</button>
+            <button class="btn btn-primary" id="btNoticias">Inserir</button>
           </form>
 
         </div>
@@ -39,44 +39,12 @@
     </div>
   <footer>
    <div id="footer"></div>
-  </footer>
-<script>
- $( document ).ready(function() {
-    $(".cadastrar-pagina button").click(function(){
-      var url = $("#url").val();
-      var titulo = $("#titulo").val();
-      var conteudo_pagina = $("#conteudo").val();
-      if(url != "" && titulo != "" && subtitulo != "") {
-        $.ajax({
-          method: "POST",
-          data: {'url': url, 'titulo': titulo, 'conteudo_pagina': conteudo_pagina},
-          url: "http://localhost:4000/inserir/banner"
-        }).done(function( data ) {
-          var id = data.insertId;
-          if(id) {
-            $("#banner-titulo").html("");
-            $("#banner-subtitulo").html("");
-            $.ajax({
-              method: "GET",
-              url: "http://localhost:4000/banner/" + id
-          }).done(function( data ) {
-              $( "#banner-titulo" ).append( data[0].titulo );
-              $( "#banner-subtitulo" ).append( data[0].subtitulo );
-            });
-          }
-        });
-      } else {
-        alert('BARRADO NO BAILE');
-      }
-    });
-    function cadastrarPagina(url, titulo, conteudo){
-
-    }
-  });</script>
+ </footer>
   <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
    <!-- APP JS -->
    <script src="/assets/js/index.js"></script>
    <script src="/assets/js/modulos.js"></script>
+   <script src="/assets/js/admin.js"></script>
  </body>
 </html>
