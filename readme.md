@@ -74,4 +74,4 @@ cordova build
 ```
 Este comando irá gerar uma pasta .zip dentro de `platforms/browser/build/package.zip`
 
-Para gerarmos o instalador `https://build.phonegap.com/`, se loga, private upload e colocamos o zip que está dentro da pasta acima
+Para gerarmos o instalador [phonegap build ](https://build.phonegap.com/), se loga, private upload e colocamos o zip que está dentro da pasta acima
