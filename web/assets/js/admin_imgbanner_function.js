@@ -1,0 +1,1 @@
+$(document).ready(function(){$.ajax({method:"GET",url:"http://localhost:4000/banner"}).done(function(n){var e="",o=$("#id_banner").val();$("#selbanner"+o).append('<option value=""></option>'),$.each(n,function(a){n[a].id==o&&(e="selected"),$("#selbanner"+o).append('<option value="'+n[a].id+'" '+e+">"+n[a].titulo+"</option>")})})});

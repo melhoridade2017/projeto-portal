@@ -1,0 +1,1 @@
+$(document).ready(function(){$.ajax({method:"GET",url:"http://localhost:4000/menu"}).done(function(e){var n="",o=$("#id_menu").val();$("#selmenu"+o).append('<option value=""></option>'),$.each(e,function(t){e[t].id==o&&(n="selected"),$("#selmenu"+o).append('<option value="'+e[t].id+'" '+n+">"+e[t].texto+"</option>")})})});
