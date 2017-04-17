@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MelhorIdadeSA</title>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- Pagina um -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Melhor Idade SA</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+
+		<img class="logo-home" src="img/logo-melhor-idade.png" alt="">
+
+		<p><a href="#quemsomos" class="ui-btn ui-shadow ui-corner-all">QUEM SOMOS</a></p>
+        <p><a href="#inscricoes" class="ui-btn ui-shadow ui-corner-all">INSCREÇÕES</a></p>
+		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<h4>Footer</h4>
+		<p class="justify-content-xl-center">© copyright 2017 by melhor idade s.a</p>
+	</div><!-- /footer -->
+</div><!-- /Pagina um -->
+
+
+<!-- Pagina dois -->
+<div data-role="page" id="quemsomos" data-theme="a">
+
+	<div data-role="header">
+		<h1>Melhor Idade SA -  Quem Somos</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Melhor Idade SA</h2>
+		<p>Mussum Ipsum, cacilds vidis litro abertis. Detraxit consequat et quo num tendi nada. Suco de cevadiss deixa as pessoas mais interessantiss. Quem num gosti di mum que vai caçá sua turmis! A ordem dos tratores não altera o pão duris
+		<br />
+		Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Sapien in monti palavris qui num significa nadis i pareci latim. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Viva Forevis aptent taciti sociosqu ad litora torquent
+		<br />
+		Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
+		Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss. Casamentiss faiz malandris se pirulitá.</p>
+		<p><a href="#one" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left ui-shadow ui-corner-all ui-btn-b">VOLTAR PARA HOME</a></p>
+
+	</div><!-- /content -->
+	<div data-role="footer">
+		<h4>Footer</h4>
+		<p class="justify-content-xl-center">© copyright 2017 by melhor idade s.a</p>
+	</div><!-- /footer -->
+</div><!-- /Pagina dois-->
+
+
+
+
+<!-- Pagina dois -->
+<div data-role="page" id="inscricoes" data-theme="a">
+
+    <div data-role="header">
+        <h1>Melhor Idade SA - INSCREÇÕES</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2></h2>
+        <p>
+            <label for="text-basic">Nome Completo:</label>
+            <input name="text-basic" id="nome" value="" type="text">
+        </p>
+
+        <p>
+            <label for="date">Data de Nacimento:</label>
+            <input name="date" id="data" value="" type="date">
+
+        </p>
+
+
+        <p><a href="#one" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left ui-shadow ui-corner-all ui-btn-b">VOLTAR PARA HOME</a></p>
+
+    </div><!-- /content -->
+    <div data-role="footer">
+        <h4>Footer</h4>
+        <p class="justify-content-xl-center">© copyright 2017 by melhor idade s.a</p>
+    </div><!-- /footer -->
+</div><!-- /Pagina dois-->
+
+
+
+
+
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="b">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+		<p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Footer</h4>
+		<p class="justify-content-xl-center">© copyright 2017 by melhor idade s.a</p>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+
+</body>
+</html>
