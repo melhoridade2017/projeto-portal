@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MelhorIdadeSA</title>
 	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="css/jqm-demos.css">
+	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<script src="js/jquery.js"></script>
-	<script src="js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
-
 <body>
 
 <!-- Pagina um -->
 <div data-role="page" id="one">
 
 	<div data-role="header">
-		<h1>Melhor Idade SA</h1>
+		<h1>Melhor Idade SA - 2017</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
 
-		<img class="logo-home" src="img/logo-melhor-idade.png" alt="">
-
 		<p><a href="#quemsomos" class="ui-btn ui-shadow ui-corner-all">QUEM SOMOS</a></p>
-        <p><a href="#inscricoes" class="ui-btn ui-shadow ui-corner-all">INSCREÇÕES</a></p>
-		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+		<p><a href="#equipe" class="ui-btn ui-shadow ui-corner-all">EQUIPE</a></p>
+		<p><a href="#blog" class="ui-btn ui-shadow ui-corner-all">BLOG</a></p>
+		<p><a href="#noticias" class="ui-btn ui-shadow ui-corner-all">NOTICIAS</a></p>
+		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">FALE CONOSCO</a></p>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="a">
-		<h4>Footer</h4>
 		<p class="justify-content-xl-center">© copyright 2017 by melhor idade s.a</p>
 	</div><!-- /footer -->
 </div><!-- /Pagina um -->
@@ -74,7 +71,7 @@
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-        <h2></h2>
+        <h2>g</h2>
         <p>
             <label for="text-basic">Nome Completo:</label>
             <input name="text-basic" id="nome" value="" type="text">
@@ -120,6 +117,27 @@
 	</div><!-- /footer -->
 </div><!-- /page popup -->
 
+<!-- Pagina equipe -->
+<div data-role="page" id="equipe" data-theme="a">
 
+	<div data-role="header">
+		<h1>Equipe</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Conheça nossa equipe!</h2>
+		<p>Abaixo terá a opção de conhecer nossa equipe por departamento.</p>
+
+		<div class="ui-select"><select name="select-choice" data-theme="b" id="select-choice-b" data-native-menu="false" data-form="ui-btn-up-b" tabindex="-1"><option value="standard">Enfermeiras</option><option value="rush">Médicos</option><option value="express">Cuidadores</option><option value="overnight">Diretória</option></select><div style="display: none;" id="select-choice-b-listbox-placeholder"></div></div>
+
+
+
+		<p><a href="#one" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left ui-shadow ui-corner-all ui-btn-b">VOLTAR PARA HOME</a></p>
+
+	</div><!-- /content -->
+	<div data-role="footer">
+		<p class="justify-content-xl-center">© Melhor Idade S.A. Todos os Direitos Reservados</p>
+	</div><!-- /footer -->
+</div><!-- /Pagina Equipe-->
 </body>
 </html>
