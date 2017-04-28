@@ -5,6 +5,6 @@ module.exports = function (gulp, plugins) {
     gulp.src('./assets/app/js/**/*.js')
     .pipe(plugins.uglify())
     .pipe(plugins.sourcemaps.write())
-    gulp.dest('./assets/js')
+    .pipe(gulp.dest('./assets/js'))
   };
 };
