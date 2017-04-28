@@ -1,52 +1,17 @@
+'use strict';
 var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
-var sourcemaps = require('gulp-sourcemaps');
-var watch = require('gulp-watch');
-var uglify = require('gulp-uglify');
-var pump = require('pump');
-var imagemin = require('gulp-imagemin');
-var optipng = require('imagemin-optipng');
+//estamos chamando o arquivo onde se encontra nossas tarefas
+var tasks = require('./assets/tasks/tasks');
 
-//Javascript
-gulp.task('minify-js', function (cb) {
-  pump([
-        gulp.src('assets/app/js/*.js'),
-        uglify(),
-        gulp.dest('assets/js')
-    ],
-    cb
-  );
-});
 
-//CSS
-gulp.task('minify-css', function() {
-  return gulp.src('assets/app/css/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css'));
-});
+// Aqui chamanos o metodo para pegar as tafejas que estão dentro de tasks.js, no primeiro parametro chamamos o caminho, no segundo o nome da tarefa
+gulp.task('css', tasks.getTask('css', 'Css'));
+gulp.task('js', tasks.getTask('js', 'Js'));
+gulp.task('img', tasks.getTask('img', 'Img'));
 
-//IMG
-gulp.task('minify-img-jpg', function() {
-    gulp.src('assets/app/img/*.jpg')
-        .pipe(imagemin())
-        .pipe(gulp.dest('assets/img'));
-});
-
-gulp.task('minify-img-png', function() {
-    return gulp.src('assets/app/img/*.png')
-		.pipe(optipng({ optimizationLevel: 3 })())
-		.pipe(gulp.dest('assets/img'));
-});
-
-gulp.task('default', function () {
-    //CSS
-    gulp.watch('assets/app/css/*.css', ['minify-css']);
-    //JS
-    gulp.watch('assets/app/js/*.js', ['minify-js']);
-    //IMG
-    gulp.watch('assets/app/img/*.jpg', ['minify-img-jpg']);
-    gulp.watch('assets/app/img/*.png', ['minify-img-png']);
-
+// Tarefa default de escuta (Watch) dos arquivos
+gulp.task('default', ['css', 'js', 'img'], function () {
+    gulp.watch(tasks.basePaths.css, ['css']);
+    gulp.watch(tasks.basePaths.js, ['js']);
+    gulp.watch(tasks.basePaths.img, ['img']);
 });
